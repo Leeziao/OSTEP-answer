@@ -20,7 +20,9 @@ After:  ticks=e284fe171fc
 LOOP=     10000, total ticks=   3930886, ONE=393.088600 ticks
 ```
 
-Run `cat /proc/cpuinfo | grep "cpu MHz" | sort | uniq` and the frequency of cpu is 2370 MHz. Hence one syscall spends $\frac{393}{2370\times 10^6}\times 10^{-6}=0.1658~\text{usec}$ , which is very similar to the first method.
+Run `cat /proc/cpuinfo | grep "cpu MHz" | sort | uniq` and the frequency of cpu is 2370 MHz. Hence one syscall spends
+$$\frac{393}{2370\times 10^6}\times 10^{-6}=0.1658~\mu s$$
+which is very similar to the first method.
 
 3. Measure context switch duration [code](ctx_duration.c).
 
